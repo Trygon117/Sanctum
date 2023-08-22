@@ -1,0 +1,14 @@
+.login-box {
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 350px;
+
+    background-color: var(--SecondaryBackgroundColor-Light);
+    border-radius: 5px;
+    transition: background 400ms ease-in-out;
+}
+
+.login-box.dark {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Slab:wght@200;300;400&display=swap');
+
+body {
+    position: relative;
+    font-size: 1em;
+    line-height: 1;
+    font-family: 'Roboto Slab', serif;
+    color: var(--TextColor-Dark);
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+#root,
+.App {
+    position: relative;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 350px;
+    min-width: 250px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+
+    color: var(--TextColor-Light);
+    transition: color 400ms ease-in-out;
+}
+
+.form.dark {
+    color: var(--TextColor-Dark);
+}
+
+.form .form-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form .form-field {
+    position: relative;
+    width: calc(100% - 14px);
+    border: 2px solid var(--Highlight-Light);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.form .form-field .form-label {
+    position: absolute;
+    top: 9px;
+    color: var(--Highlight-Light);
+    background-color: var(--SecondaryBackgroundColor-Light);
+    padding: 0px 5px;
+    font-size: 15px;
+
+    transition: background 400ms ease-in-out, transform 150ms ease-in-out;
+    cursor: text;
+    user-select: none;
+    transform-origin: left;
+}
+
+.form .form-field:focus-within .form-label,
+.form .form-field.has-content .form-label {
+    transform: translateY(-16px) scale(.8);
+}
+
+.form.dark .form-field .form-label {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+}
+
+.form .form-field .form-input,
+.form .form-field .form-textarea {
+    width: 100%;
+    background-color: var(--SecondaryBackgroundColor-Light);
+    border: none;
+    outline: none;
+    caret-color: var(--TextColor-Light);
+    color: var(--TextColor-Light);
+    resize: none;
+    font-size: 15px;
+
+    transition: background 400ms ease-in-out,
+        color 400ms ease-in-out,
+        box-shadow 400ms ease-in-out;
+}
+
+.form .form-field .form-input:autofill,
+.form .form-field .form-input:-webkit-autofill,
+.form .form-field .form-input:-webkit-autofill:hover,
+.form .form-field .form-input:-webkit-autofill:focus,
+.form .form-field .form-textarea:autofill,
+.form .form-field .form-textarea:-webkit-autofill,
+.form .form-field .form-textarea:-webkit-autofill:hover,
+.form .form-field .form-textarea:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--TextColor-Light);
+    -webkit-box-shadow: 0 0 0px 1000px var(--SecondaryBackgroundColor-Light) inset;
+}
+
+.form.dark .form-field .form-input:autofill,
+.form.dark .form-field .form-input:-webkit-autofill,
+.form.dark .form-field .form-input:-webkit-autofill:hover,
+.form.dark .form-field .form-input:-webkit-autofill:focus,
+.form.dark .form-field .form-textarea:autofill,
+.form.dark .form-field .form-textarea:-webkit-autofill,
+.form.dark .form-field .form-textarea:-webkit-autofill:hover,
+.form.dark .form-field .form-textarea:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--TextColor-Dark);
+    -webkit-box-shadow: 0 0 0px 1000px var(--SecondaryBackgroundColor-Dark) inset;
+}
+
+.form.dark .form-field .form-input,
+.form.dark .form-field .form-textarea {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+    caret-color: var(--TextColor-Dark);
+    color: var(--TextColor-Dark);
+}
+
+.form .form-footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.form .form-footer .form-submit {
+    border-radius: 5px;
+    padding: 3px;
+    border: 2px solid var(--Highlight-Light);
+    background-color: transparent;
+    color: var(--TextColor-Light);
+    cursor: pointer;
+    user-select: none;
+
+    transition: color 400ms ease-in-out, border 400ms ease-in-out;
+}
+
+.form .form-footer .form-submit:hover {
+    background-color: var(--Hover);
+}
+
+.form.dark .form-footer .form-submit {
+    border: 2px solid var(--Highlight-Dark);
+    color: var(--TextColor-Dark);
+}
+
+.form .form-footer .form-link {
+    color: var(--Highlight-light);
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.form.dark .form-footer .form-link {
+    color: var(--Highlight-Dark);
+}
+
+.form .form-footer .form-link:hover {
+    color: var(--Hover);
+    text-decoration: underline;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--Silver);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--Onyx);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--Onyx-RGB), 0.8);
+}

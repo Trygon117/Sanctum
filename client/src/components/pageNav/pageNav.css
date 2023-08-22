@@ -1,0 +1,67 @@
+.page-nav {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-top: 50px;
+    height: calc(100% - 50px);
+    width: 55px;
+
+    color: white;
+    background-color: var(--NavBar);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.15s 0s;
+    z-index: 9;
+}
+
+.page-nav:hover {
+    width: 130px;
+}
+
+.top-nav {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.bottom-nav {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tab {
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 17px;
+
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab:hover {
+    background-color: var(--Hover);
+}
+
+.tab .icon {
+    min-width: 32px;
+    min-height: 32px;
+}

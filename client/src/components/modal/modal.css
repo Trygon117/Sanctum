@@ -1,0 +1,33 @@
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--Disabled);
+
+    z-index: 1000;
+}
+
+.modal {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    margin-left: calc(50vw - 270px);
+    margin-top: calc(50vh - 270px);
+    padding: 20px;
+}
+
+.modal.light {
+    background-color: var(--SecondaryBackgroundColor-Light);
+    color: var(--TextColor-Light);
+}
+
+.modal.dark {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+    color: var(--TextColor-Dark);
+}

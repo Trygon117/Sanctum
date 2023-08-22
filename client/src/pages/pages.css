@@ -1,0 +1,23 @@
+.page {
+    position: absolute;
+
+    height: calc(100% - 50px);
+    width: calc(100% - 55px);
+
+    top: 50px;
+    left: 55px;
+
+    background: var(--PrimaryBackgroundColor-Light);
+
+    transition: color 400ms ease-in-out, background 400ms ease-in-out;
+}
+
+.page.light {
+    background: var(--PrimaryBackgroundColor-Light);
+    color: var(--TextColor-Light);
+}
+
+.page.dark {
+    background: var(--PrimaryBackgroundColor-Dark);
+    color: var(--TextColor-Dark);
+}

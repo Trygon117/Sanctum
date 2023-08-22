@@ -1,0 +1,112 @@
+.page-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: calc(100% - 20px);
+    height: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 20px;
+
+    background-color: var(--NavBar);
+    color: white;
+
+    z-index: 10;
+}
+
+
+/* .page-header.dark {
+    border-image: linear-gradient(to right, #40BFA7, 50%, var(--PrimaryBackgroundColor-Dark)) 1;
+} */
+
+.page-header .left-header,
+.page-header .right-header,
+.page-header .center-header {
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.page-header .left-header {
+    justify-content: flex-start;
+}
+
+.page-header .right-header {
+    justify-content: flex-end;
+}
+
+.page-header .center-header {
+    justify-content: center;
+    width: 175%;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.hamburger:hover {
+    background-color: var(--Hover);
+}
+
+.hamburger svg {
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    background-color: var(--SecondaryBackgroundColor-Light);
+    height: 220px;
+    width: 150px;
+}
+
+.menu.dark {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+}
+
+.nav-tabs {
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+}
+
+.nav-tab {
+    height: calc(100% - 10px);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    user-select: none;
+    cursor: pointer;
+
+    color: var(--PrimaryColor);
+}
+
+.nav-tab.selected {
+    /* border-bottom: 2px solid var(--PrimaryColor) !important; */
+    /* background-color: var(--PrimaryColor); */
+    color: black !important;
+    font-weight: bold;
+}
+
+.nav-tab:hover {
+    /* border-bottom: 2px solid var(--Hover); */
+    /* background-color: var(--Hover); */
+    color: var(--Hover);
+}

@@ -1,0 +1,79 @@
+.projects {
+    width: calc(100% - 100px - 40px);
+    height: calc(100% - 100px - 40px);
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    transition: background 400ms ease-in-out;
+}
+
+.light .projects {
+    background-color: var(--SecondaryBackgroundColor-Light);
+}
+
+.dark .projects {
+    background-color: var(--SecondaryBackgroundColor-Dark);
+}
+
+.projects .header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid var(--Highlight-Light);
+}
+
+.dark .projects .header {
+    border-bottom: 2px solid var(--Highlight-Dark);
+}
+
+.projects .header .title {
+    font-size: 24px;
+}
+
+.projects .header .new-button {
+    border-radius: 5px;
+    border: 2px solid var(--TextColor-Light);
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: border 400ms ease-in-out;
+}
+
+.dark .projects .header .new-button {
+    border: 2px solid var(--TextColor-Dark);
+}
+
+.projects .header .new-button:hover {
+    background-color: var(--Hover);
+}
+
+.projects .list {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-top: 10px;
+
+    height: calc(100% - 24px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.projects .list .no-projects {
+    margin-top: 20px;
+}
+
+.projects .list .project-item {
+    width: calc(100% - 4px);
+    height: 50px;
+    background-color: var(--Highlight-Light);
+}
+
+.dark .projects .list .project-item {
+    background-color: var(--Highlight-Dark);
+}
